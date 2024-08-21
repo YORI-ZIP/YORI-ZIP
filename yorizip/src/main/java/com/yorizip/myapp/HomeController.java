@@ -33,8 +33,34 @@ public class HomeController {
 
 		model.addAttribute("serverTime", formattedDate );
 
-		return "/minigame/Main";
+		return "/minigame/Index";
+	}
+	@RequestMapping(value = "/Index", method = RequestMethod.POST)
+	public String Index(Locale locale, Model model) {
+		logger.info("Index 성공", locale);
+
+		return "/minigame/Index";
 	}
 
 
-}
+
+		// 기존 GET 메서드
+		@RequestMapping(value = "/Main", method = RequestMethod.GET)
+		public String mainGet(Locale locale, Model model) {
+			// GET 요청 처리 로직
+			return "minigame/Main";  // JSP 파일 경로 반환
+		}
+
+		// POST 요청 처리 메서드 추가
+		@RequestMapping(value = "/Main", method = RequestMethod.POST)
+		public String mainPost(Locale locale, Model model) {
+			// POST 요청 처리 로직
+			return "minigame/Main";  // JSP 파일 경로 반환
+		}
+	}
+//	@RequestMapping(value = "/result", method = RequestMethod.GET)
+//	public String result(Locale locale, Model model) {
+//		logger.info("result 성공",locale);
+//		return "/minigame/result";
+//	}
+
