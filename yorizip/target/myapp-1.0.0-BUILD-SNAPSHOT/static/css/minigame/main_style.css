@@ -1,52 +1,62 @@
 body {
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #D4ECE2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    text-align: center;
+    margin: 0 auto;
+    padding: 120px;
+    background-color: #e0f7fa;
+}
 
+.header-container {
+    margin-bottom: 20px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column; /* 요소를 세로로 정렬 */
+    align-items: center;
+}
+
+h1 {
+    font-size: 50px;
+    margin-top: 0;
+    color: rebeccapurple;
+    display: inline-block;
+    padding: 0;
+}
+
+h2 {
+    background-color: white;
+    border: 2px solid gray;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 50vh;
 }
 
 .food-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 0 20px;
+    text-align: center;
 }
 
-.food-item img {
-    width: 300px; /* 이미지의 너비 조정 */
-    height: auto;
+.food-item input[type="image"] {
+    width: 400px;
+    height: 400px;
+    object-fit: cover; /* 이미지가 요소를 가득 채우도록 조정 */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-.select-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: 1px solid #333;
-    border-radius: 5px;
-    background-color: #fff;
-    transition: background-color 0.3s ease;
-}
-
-.select-button:hover {
-    background-color: #f0f0f0;
+/* 이미지에 마우스를 올렸을 때 확대되는 효과 */
+.food-item input[type="image"]:hover {
+    transform: scale(1.4); /* 이미지를 1.2배로 확대 */
 }
 
 .vs-text {
-    font-size: 48px;
-    font-weight: bold;
+    font-size: 24px;
     margin: 0 20px;
 }

@@ -41,9 +41,6 @@ public class HomeController {
 
 		return "/minigame/Index";
 	}
-
-
-
 		// 기존 GET 메서드
 		@RequestMapping(value = "/Main", method = RequestMethod.GET)
 		public String mainGet(Locale locale, Model model) {
@@ -57,10 +54,15 @@ public class HomeController {
 			// POST 요청 처리 로직
 			return "minigame/Main";  // JSP 파일 경로 반환
 		}
+
+	@RequestMapping(value = "/result", method = RequestMethod.GET)
+	public String result(Locale locale, Model model) {
+
+		return "/minigame/result";
 	}
-//	@RequestMapping(value = "/result", method = RequestMethod.GET)
-//	public String result(Locale locale, Model model) {
-//		logger.info("result 성공",locale);
-//		return "/minigame/result";
-//	}
+
+
+	}
+
+
 

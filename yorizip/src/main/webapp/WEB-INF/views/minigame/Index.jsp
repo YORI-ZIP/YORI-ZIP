@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>미니게임</title>
-    <link rel="stylesheet" href="/static/css/minigame/mingame_styles.css">
+    <link rel="stylesheet" href="/static/css/minigame/Index_style.css">
 
 </head>
 <body>
